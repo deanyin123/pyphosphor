@@ -26,7 +26,7 @@ class SensorValue(DbusProperties):
     IFACE_NAME = 'org.openbmc.SensorValue'
 
     def __init__(self, bus, name):
-        self.Set(SensorValue.IFACE_NAME, 'units', "xyz.openbmc_project.Sensor.Value.Unit.Switch")
+        self.Set(SensorValue.IFACE_NAME, 'Unit', "")
 
     @dbus.service.method(
         IFACE_NAME, in_signature='v', out_signature='')
