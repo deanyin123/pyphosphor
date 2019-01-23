@@ -27,6 +27,7 @@ class SensorValue(DbusProperties):
 
     def __init__(self, bus, name):
         self.Set(SensorValue.IFACE_NAME, 'Unit', "")
+        self.Set(SensorValue.IFACE_NAME, 'Value', 0)
 
     @dbus.service.method(
         IFACE_NAME, in_signature='v', out_signature='')
